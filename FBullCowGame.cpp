@@ -102,15 +102,15 @@ bool FBullCowGame::IsLowercase(FString Word) const
 }
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
-	if (!IsIsogram( Guess )) //if the guess isnt an isogram 
+	if (!IsIsogram( Guess ))
 	{
 		return EGuessStatus::Not_Isogram;
 	}
-	else if ( !IsLowercase( Guess )) // if the guess isnt all lower case 
+	else if ( !IsLowercase( Guess )) 
 	{
 		return EGuessStatus::Not_Lowercase;
 	}
-	else if ( Guess.length() != GetHiddenWordLength() ) // if guess length is wrong 
+	else if ( Guess.length() != GetHiddenWordLength() ) 
 	{
 		return EGuessStatus::Wrong_Length;
 	}
